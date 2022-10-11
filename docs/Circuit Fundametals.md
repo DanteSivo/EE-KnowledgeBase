@@ -27,6 +27,12 @@ Trivia: This is because Ben Franklin took a coin flip to decide the direction of
 
 **Current** - The flow of electrons through a conductor
 
+$$
+\begin{equation}
+    C = \dfrac{dq}{dt}
+\end{equation}
+$$
+
 Current flow induces the following
 
 1. **Heat** - More thermal disipation at higher currents and resistances. 
@@ -38,18 +44,8 @@ $$
 $$
 2. **EMF Field** - A conductor will build up a magnetic field, effictivley acting like an inductor.
 
-## Circuit Simulators
-### FALSTAD 
-An [Online Simulator](https://www.falstad.com/circuit/) that demonstrates the current flow of a specified electrical signal in an animated format.
- 
-![](images\FALSTAD-GIF.gif)
 
-**NOTE** - FALSTAD is **NOT** SPICE based. This means that while the components in FALSTAD are closely coorilated to SPICE, they are not 1 to 1. 
-### SPICE
-
-AKA Simulation Program with Integrated Circuit Emphasis. First developed in the 70s, SPICE has evolved into the primary circuit simulation software world wide. Highly configurable with detailed settings. [LTSpice](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html) is a common light-weight program used around the world.
-
-## What is a Volt?
+## Definition of a Volt
 $$
 \begin{equation}
     V = \dfrac{potential\ energy}{charge} = \dfrac{J}{C} = \dfrac{kg\cdot{}m^2\cdot{}s^{-2}}{A\cdot{}s}
@@ -68,6 +64,14 @@ Note, Wb is webers per second (magnetic flux per time).
 
 Volts is also **power per current** or **energy per charge**
 
+The potential difference (voltage drop) from a to b in *joules per coulomb*
+
+$$
+\begin{equation}
+    V_{ab} = \dfrac{dw}{dq} 
+\end{equation}
+$$
+
 The **higher** your voltage, the more electromotive force is generated. This is because...
 $$
 \begin{equation}
@@ -75,3 +79,12 @@ $$
 \end{equation}
 $$
 Where R is the internal resistance of the motor. So **for no internal resistance, Electromotive Force is correlated to Voltage**
+
+## Impedance and Admittance
+
+**Impedance** = The effective resistance of an electric circuit from the combined effects of **resistance** and **reactance**
+
+**Admittance** = Inverse of Impedance. A measure of ease of conduction.
+
+![](images\impedanceadmittancetable.png){ width="400" }
+
