@@ -27,5 +27,3 @@ An [Online Simulator](https://www.falstad.com/circuit/) that demonstrates the cu
 ### SPICE
 
 AKA Simulation Program with Integrated Circuit Emphasis. First developed in the 70s, SPICE has evolved into the primary circuit simulation software world wide. Highly configurable with detailed settings. [LTSpice](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html) is a common light-weight program used around the world.
-
-## Mesh Analysis
