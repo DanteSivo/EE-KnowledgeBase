@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Circuit Analysis - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Circuit Analysis";
+        var mkdocs_page_input_path = "Circuit Analysis.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Welcome to MkDocs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../AC%20Circuits/">AC Circuits</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Circuit Analysis</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#kirchhoffs-voltage-law-kvl">Kirchhoff's Voltage Law (KVL)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#kirchhoffs-current-law-kcl">Kirchhoff's Current Law (KCL)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#circuit-simulators">Circuit Simulators</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#falstad">FALSTAD</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#spice">SPICE</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Circuit%20Devices/">Circuit Devices</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Circuit%20Fundametals/">Circuit Fundamentals</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DC%20Circuits/">DC Circuits</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Interview%20Questions/">Interview Questions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../MarkdownTemplate/">Markdown Template</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Math%20Concepts/">Math Concepts</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../interview%20Anwsers/">Interview Anwsers</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Circuit Analysis</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="circuit-analysis">Circuit Analysis</h1>
+<p>Documentation for basic circuit analysis techniques that can be used in all circuits</p>
+<h2 id="kirchhoffs-voltage-law-kvl">Kirchhoff's Voltage Law (KVL)</h2>
+<p><mark>The voltage into and out of any given node is zero</mark>
+<script type="math/tex; mode=display">
+\begin{equation}
+    \Sigma{V} = 0
+\end{equation}
+</script>
+</p>
+<p><img alt="" src="../images/KVL_Circuit.jpg" width="300" /></p>
+<h2 id="kirchhoffs-current-law-kcl">Kirchhoff's Current Law (KCL)</h2>
+<p><mark>The amount of current entering and exiting a node is equal</mark>
+<img alt="" src="../images/KCL_Circuit.gif" width="400" /></p>
+<h2 id="circuit-simulators">Circuit Simulators</h2>
+<h3 id="falstad">FALSTAD</h3>
+<p>An <a href="https://www.falstad.com/circuit/">Online Simulator</a> that demonstrates the current flow of a specified electrical signal in an animated format.</p>
+<p><img alt="" src="../images/FALSTAD-GIF.gif" /></p>
+<p><strong>NOTE</strong> - FALSTAD is <strong>NOT</strong> SPICE based. This means that while the components in FALSTAD are closely coorilated to SPICE, they are not 1 to 1. </p>
+<h3 id="spice">SPICE</h3>
+<p>AKA Simulation Program with Integrated Circuit Emphasis. First developed in the 70s, SPICE has evolved into the primary circuit simulation software world wide. Highly configurable with detailed settings. <a href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html">LTSpice</a> is a common light-weight program used around the world.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../AC%20Circuits/" class="btn btn-neutral float-left" title="AC Circuits"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Circuit%20Devices/" class="btn btn-neutral float-right" title="Circuit Devices">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../AC%20Circuits/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Circuit%20Devices/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
