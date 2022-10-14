@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: EE Knowledge Base
 theme: readthedocs
 markdown_extensions:
   - attr_list

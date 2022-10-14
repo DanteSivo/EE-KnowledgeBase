@@ -2,6 +2,9 @@
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
+## Other Resources I find helpful
+[Hardware Ninja - YouTube Interview Questions](https://www.youtube.com/c/HardwareNinja/videos)
+
 ## Commands
 
 * `mkdocs new [dir-name]` - Create a new project.
