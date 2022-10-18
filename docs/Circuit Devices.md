@@ -76,3 +76,9 @@ The ability for current to flow across the diode is controlled by the **depletio
 Stands for Metal-Oxide-Semiconductor-Field-Effect transistor
 
 ## BJT (Bipolar Junction Transistor)
+A current based transistor that is either NPN or PNP where there are two junctions. All BJT's have four different operating modes
+
+1. Saturation - Both junctions forward biased
+2. Cutoff - Both Junctions reverse biased
+3. Forward Active (Amplifier) - EBJ forward biased, CBJ reversed biased
+4. Reverse Active - EBJ reverse biased, CBJ forward biased

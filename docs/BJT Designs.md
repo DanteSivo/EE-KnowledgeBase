@@ -2,6 +2,31 @@
 
 Some general designs with their applications.
 
+## Current Mirror / Current Source
+The collector current on both BJTs is equivalent. As a result, $V_{BE1} = V_{BE2}$.
+
+
+==Ideal Case:== 
+$$
+    \begin{equation}
+    I_{REF} = I_{s1}exp(\dfrac{V_{BE1}}{V_T})
+    \\
+    I_{OUT} = I_{s2}exp(\dfrac{V_{BE2}}{V_T})
+    \\
+    \boxed{\dfrac{I_{OUT}}{I_{REF}} = \dfrac{I_{s2}}{I_{s_2}}} = \dfrac{Area 2}{Area 1}
+    \end{equation}
+$$
+==Non-Ideal (Realistic) Case:== 
+$$
+    \begin{equation}
+    I_{REF} = I_{c1}+\dfrac{2I_{c1}}{\beta} = I_{c1}(1 + \dfrac{2}{\beta{}})
+    \\
+    I_{OUT} = I_{c1}
+    \\
+    \boxed{\dfrac{I_{OUT}}{I_{REF}} = \dfrac{1}{1+\dfrac{2}{\beta{}}}}
+    \end{equation}
+$$
+
 ## Differential Amplifier
 Consisting of at least two BJTs. Generally, a known current, **Ie**, will be the primary consideration for the design. 
 
@@ -88,12 +113,15 @@ $$
         * $I_B(1k\Omega{}) + 0.7 + 2(\beta{}+1)I_B(2k\Omega{}) - 10 = 0$
         * $I_B = \dfrac{9.3 (V)}{(1k\Omega{}+2(200+1)2k\Omega{})} = 11.6uA$
         * $I_C = 200I_B = 2.32mA$
-        * $V_{CE1} = 10 - -I_B(1k\Omega{}) - -0.7 = 10.7$
-        * $V_{CE2} = 10 -  I_C{2k\Omega{}} - -0.7 = 6.06$
-        * $r\pi{} = \dfrac{\beta{}V_T}{I_C} = dfrac{200(0.026V)}{2.32mA} = 2.24k{\Omega{}}$
+        * $V_{CE1} = 10 - -I_B(1k\Omega{})- -0.7 = 10.7$
+        * $V_{CE2} = 10 -  I_C(2k\Omega{}) - -0.7 = 6.06$
+        * $r\pi{} = \dfrac{\beta{}V_T}{I_C} = \dfrac{200(0.026V)}{2.32mA} = 2.24k{\Omega{}}$
 * AC Analysis:
     * $A_{vdss} = \dfrac{gmR_Cr\pi}{2(1k\Omega{}+r\pi)} = \dfrac{\beta{}R_C}{(r\pi{}+1k\Omega{})} = 61.7$
     * $\dfrac{V_{oss}}{V_{ic}} = \dfrac{-\beta{}R_C}{2R_e(\beta{}+1)+(r\pi{}+1k\Omega{})}$
-    * $CMMR = \dfrac{A_{vdss}}{\dfrac{V_{oss}}{V_{ic}}} = \dfrac{61.7}{0.496} = 125$
+    * $CMMR = {A_{vdss}}/{\dfrac{V_{oss}}{V_{ic}}} = \dfrac{61.7}{0.496} = 125$
   Analog Electronics Lecture -> [Click to Download](pdfs/Analog_Electronics_RIT_EEEE_480.pdf)
+  
+  Microelectronic Circuits by Dedra & Smith -> Chapter 9
+
 ## Common Mode Amplifier
