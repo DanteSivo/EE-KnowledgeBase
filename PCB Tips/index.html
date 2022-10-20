@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>DC Circuits - EE Knowledge Base</title>
+    <title>PCB Tips - EE Knowledge Base</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "DC Circuits";
-        var mkdocs_page_input_path = "DC Circuits.md";
+        var mkdocs_page_name = "PCB Tips";
+        var mkdocs_page_input_path = "PCB Tips.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -64,12 +64,8 @@
                 <li class="toctree-l1"><a class="reference internal" href="../Circuit%20Fundametals/">Circuit Fundamentals</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">DC Circuits</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#voltage-divider">Voltage Divider</a>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../DC%20Circuits/">DC Circuits</a>
                 </li>
               </ul>
               <ul>
@@ -84,8 +80,12 @@
                 <li class="toctree-l1"><a class="reference internal" href="../Math%20Concepts/">Math Concepts</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../PCB%20Tips/">PCB Tips</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">PCB Tips</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#decoupling-capacitors">Decoupling Capacitors</a>
+    </li>
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -106,7 +106,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>DC Circuits</li>
+      <li>PCB Tips</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -115,20 +115,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="dc-circuits">DC Circuits</h1>
-<h2 id="voltage-divider">Voltage Divider</h2>
-<p>Divides the voltage in based on the resistances of the divider.</p>
-<p><img alt="" src="../images/voltage-divider.png" width="200" /> 
-<script type="math/tex; mode=display">
-V_{out} = V_{in} \cdot{} \dfrac{R_2}{R_1 + R_2}
-</script>
-</p>
+                <h1 id="pcb-tips">PCB Tips</h1>
+<p>This page will document various tips and tricks for PCB development, along with some long standing concepts and theories.</p>
+<h2 id="decoupling-capacitors">Decoupling Capacitors</h2>
+<p>To eliminate AC ripple, a small capacitor is generally placed near the power input of an IC (integrated-circuit).</p>
+<p>The distance between the capacitor and the terminal desitination needs to be <strong>as small as possible</strong>. This reduces the line inductance which can make a huge difference.</p>
+<pre><code>Ex). Putting a cap 12 inches away results in a line inductance of 240nH.
+     Placing it to within an inch lowers it to 20nH.
+</code></pre>
+<p><a href="http://www.interfacebus.com/Design_Capacitors.html">More information</a> </p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Circuit%20Fundametals/" class="btn btn-neutral float-left" title="Circuit Fundamentals"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Interview%20Questions/" class="btn btn-neutral float-right" title="Interview Questions">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Math%20Concepts/" class="btn btn-neutral float-left" title="Math Concepts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../interview%20Anwsers/" class="btn btn-neutral float-right" title="Interview Anwsers">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -151,10 +152,10 @@ V_{out} = V_{in} \cdot{} \dfrac{R_2}{R_1 + R_2}
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../Circuit%20Fundametals/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Math%20Concepts/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Interview%20Questions/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../interview%20Anwsers/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

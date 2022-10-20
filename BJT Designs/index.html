@@ -51,6 +51,12 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="./">BJT Designs</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#current-mirror-current-source-current-sink">Current Mirror / Current Source / Current Sink</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-example">Basic Example</a>
+    </li>
+        </ul>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#differential-amplifier">Differential Amplifier</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#simple-example">Simple Example</a>
@@ -91,6 +97,10 @@
                 </li>
               </ul>
               <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../PCB%20Tips/">PCB Tips</a>
+                </li>
+              </ul>
+              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../interview%20Anwsers/">Interview Anwsers</a>
                 </li>
               </ul>
@@ -119,6 +129,44 @@
               
                 <h1 id="bjt-designs">BJT Designs</h1>
 <p>Some general designs with their applications.</p>
+<h2 id="current-mirror-current-source-current-sink">Current Mirror / Current Source / Current Sink</h2>
+<p><img alt="" src="../images/currentmirrorcircuit.PNG" width="250" /></p>
+<p>The collector current on both BJTs is equivalent. As a result, <span class="arithmatex">\(V_{BE1} = V_{BE2}\)</span>.</p>
+<p>For Q1:
+<script type="math/tex; mode=display"> 
+\begin{equation}
+I_{REF} = I_E = \dfrac{V_{EE} - 0.7(V)}{R}
+\end{equation} 
+</script>
+</p>
+<p><mark>Ideal Case:</mark> 
+<script type="math/tex; mode=display">
+    \begin{equation}
+    I_{REF} = I_{s1}exp(\dfrac{V_{BE1}}{V_T})
+    \\
+    I_{OUT} = I_{s2}exp(\dfrac{V_{BE2}}{V_T})
+    \\
+    \boxed{\dfrac{I_{OUT}}{I_{REF}} = \dfrac{I_{s2}}{I_{s_2}}} = \dfrac{Area 2}{Area 1}
+    \end{equation}
+</script>
+<mark>Non-Ideal (Realistic) Case:</mark> 
+<script type="math/tex; mode=display">
+    \begin{equation}
+    I_{REF} = I_{c1}+\dfrac{2I_{c1}}{\beta} = I_{c1}(1 + \dfrac{2}{\beta{}})
+    \\
+    I_{OUT} = I_{c1}
+    \\
+    \boxed{\dfrac{I_{OUT}}{I_{REF}} = \dfrac{1}{1+\dfrac{2}{\beta{}}}}
+    \end{equation}
+</script>
+</p>
+<h3 id="basic-example">Basic Example</h3>
+<p><img _="," align="left" alt="" src="../images/currentsource-example1.PNG" width="350" /></p>
+<ol>
+<li>Simplfy into functional diagram and add test source (vtest)
+    <img alt="" src="../images/currentsource-exampleanwser1.PNG" width="300" /></li>
+<li>$$r\pi{} = \Beta{}(V_T/1mA)</li>
+</ol>
 <h2 id="differential-amplifier">Differential Amplifier</h2>
 <p>Consisting of at least two BJTs. Generally, a known current, <strong>Ie</strong>, will be the primary consideration for the design. </p>
 <p>The amplifier will amplify the difference signal between Vin1 and Vin2. For instance, given two signals with the same DC offset, but only one has a sinusoidal element, only the sinusoid will be amplified. Vin1 and Vout1 are out of phase. Vin1 and Vout2 are non-inverting. Vout is inverting and Vout1 is non-inverting.</p>
@@ -200,9 +248,9 @@ Differential Mode Input Resistance: <span class="arithmatex">\(\boxed{Rid = 2r\p
 <li><span class="arithmatex">\(I_B(1k\Omega{}) + 0.7 + 2(\beta{}+1)I_B(2k\Omega{}) - 10 = 0\)</span></li>
 <li><span class="arithmatex">\(I_B = \dfrac{9.3 (V)}{(1k\Omega{}+2(200+1)2k\Omega{})} = 11.6uA\)</span></li>
 <li><span class="arithmatex">\(I_C = 200I_B = 2.32mA\)</span></li>
-<li><span class="arithmatex">\(V_{CE1} = 10 - -I_B(1k\Omega{}) - -0.7 = 10.7\)</span></li>
-<li><span class="arithmatex">\(V_{CE2} = 10 -  I_C{2k\Omega{}} - -0.7 = 6.06\)</span></li>
-<li><span class="arithmatex">\(r\pi{} = \dfrac{\beta{}V_T}{I_C} = dfrac{200(0.026V)}{2.32mA} = 2.24k{\Omega{}}\)</span></li>
+<li><span class="arithmatex">\(V_{CE1} = 10 - -I_B(1k\Omega{})- -0.7 = 10.7\)</span></li>
+<li><span class="arithmatex">\(V_{CE2} = 10 -  I_C(2k\Omega{}) - -0.7 = 6.06\)</span></li>
+<li><span class="arithmatex">\(r\pi{} = \dfrac{\beta{}V_T}{I_C} = \dfrac{200(0.026V)}{2.32mA} = 2.24k{\Omega{}}\)</span></li>
 </ul>
 </li>
 </ul>
@@ -210,11 +258,12 @@ Differential Mode Input Resistance: <span class="arithmatex">\(\boxed{Rid = 2r\p
 <li>AC Analysis:<ul>
 <li><span class="arithmatex">\(A_{vdss} = \dfrac{gmR_Cr\pi}{2(1k\Omega{}+r\pi)} = \dfrac{\beta{}R_C}{(r\pi{}+1k\Omega{})} = 61.7\)</span></li>
 <li><span class="arithmatex">\(\dfrac{V_{oss}}{V_{ic}} = \dfrac{-\beta{}R_C}{2R_e(\beta{}+1)+(r\pi{}+1k\Omega{})}\)</span></li>
-<li><span class="arithmatex">\(CMMR = \dfrac{A_{vdss}}{\dfrac{V_{oss}}{V_{ic}}} = \dfrac{61.7}{0.496} = 125\)</span>
+<li><span class="arithmatex">\(CMMR = {A_{vdss}}/{\dfrac{V_{oss}}{V_{ic}}} = \dfrac{61.7}{0.496} = 125\)</span>
   Analog Electronics Lecture -&gt; <a href="../pdfs/Analog_Electronics_RIT_EEEE_480.pdf">Click to Download</a></li>
 </ul>
 </li>
 </ul>
+<p>Microelectronic Circuits by Dedra &amp; Smith -&gt; Chapter 9</p>
 <h2 id="common-mode-amplifier">Common Mode Amplifier</h2>
               
             </div>
