@@ -2,9 +2,17 @@
 
 Some general designs with their applications.
 
-## Current Mirror / Current Source
+## Current Mirror / Current Source / Current Sink
+![](images/currentmirrorcircuit.PNG){width="250"}
+
 The collector current on both BJTs is equivalent. As a result, $V_{BE1} = V_{BE2}$.
 
+For Q1:
+$$ 
+\begin{equation}
+I_{REF} = I_E = \dfrac{V_{EE} - 0.7(V)}{R}
+\end{equation} 
+$$
 
 ==Ideal Case:== 
 $$
@@ -26,6 +34,14 @@ $$
     \boxed{\dfrac{I_{OUT}}{I_{REF}} = \dfrac{1}{1+\dfrac{2}{\beta{}}}}
     \end{equation}
 $$
+
+### Basic Example
+
+![](images/currentsource-example1.PNG){width="350", align=left}
+
+1. Simplfy into functional diagram and add test source (vtest)
+    ![](images/currentsource-exampleanwser1.PNG){width="300"}
+2. $$r\pi{} = \Beta{}(V_T/1mA)
 
 ## Differential Amplifier
 Consisting of at least two BJTs. Generally, a known current, **Ie**, will be the primary consideration for the design. 
