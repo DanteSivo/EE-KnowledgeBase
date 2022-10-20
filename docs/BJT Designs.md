@@ -5,6 +5,7 @@ Some general designs with their applications.
 ## Current Mirror / Current Source / Current Sink
 ![](images/currentmirrorcircuit.PNG){width="250"}
 
+### Basic Application
 The collector current on both BJTs is equivalent. As a result, $V_{BE1} = V_{BE2}$.
 
 For Q1:
@@ -35,13 +36,15 @@ $$
     \end{equation}
 $$
 
-### Basic Example
+### 
 
+### Examples
+#### 1.
 ![](images/currentsource-example1.PNG){width="350", align=left}
 
 1. Simplfy into functional diagram and add test source (vtest)
     ![](images/currentsource-exampleanwser1.PNG){width="300"}
-2. $$r\pi{} = \Beta{}(V_T/1mA)
+2. $$r\pi{} = \beta{}(V_T/1mA)$$
 
 ## Differential Amplifier
 Consisting of at least two BJTs. Generally, a known current, **Ie**, will be the primary consideration for the design. 
@@ -141,3 +144,16 @@ $$
   Microelectronic Circuits by Dedra & Smith -> Chapter 9
 
 ## Common Mode Amplifier
+
+## Cascode Amplifier
+* **Pros**:
+    * Higher Output Resistance
+
+* **Cons**:
+    * The input voltage needs to be great enough to turn on both transistors into the saturation region. $V_1 >= V_{CE_{SAT}}$
+
+### BJT Simple Cascode Amplifier \\
+A Common Emitter (CE) stacked with a Common Base (CB).
+
+### MOSFET Simple Cascode Amplifier \\
+A Common Source (CS) stacked with a Common Gate (CG).
