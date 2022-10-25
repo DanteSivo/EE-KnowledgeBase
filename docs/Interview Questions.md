@@ -31,6 +31,9 @@ $$ \overline{A}CC + \overline{A}BC + A\overline{B}\overline{C} + A\overline{B}C 
 ### SR Latch
 
 ## BJTs
+1. **Determine $I_C$, $I_B$, $I_E$ and $V_C$, $V_B$, $V_E$**
+    ![](images\bjt-question-1.JPG){ width="600" } 
+
 
 ## Op-Amp
 1. **What does Op-Amp stand for?**

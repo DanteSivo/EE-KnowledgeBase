@@ -51,7 +51,7 @@ A standard **PN diode** is an assembly of two differently *dopped* regions of a 
 *Doping* is process of exposing the material to other elements so free electrons are produced. The coefficents of a doped region 
 are the amount of valence electrons for a given area.
 
-![](images/pn-junction.jpg){width: "400"}
+![](images/pn-junction.jpg){width: "200"}
 
 All diodes have a voltage drop across the diode (usually 0.7V). This is because of the differences in doping between the two regions.
 
@@ -71,6 +71,43 @@ The ability for current to flow across the diode is controlled by the **depletio
     * $n$ = ideal factor based on fabrication (1 unless defined from manufacturer) 
 
 3. Reverse Bias - External current applied to the cathode (positive N) terminal). This is in the opposite direction that current is supposed to be applied
+
+## Operational Amplifier (Op-Amp)
+A generic voltage amplifier commonly used in analog signal amplification due to its simplicity. 
+
+![](images/operation-amplifier-equivalent-circuit.jpg){width: "300"}
+
+![](images/amplifier-equivalent.JPG){width: "300"}
+
+This is the equivlanet circuit as an op-amp. Different devices will contain many more components but this is the simplification.
+
+* $A_{vo}R_i$ - Voltage Controlled Voltage Source
+    * $A_{vo}$ - Gain Factor
+    * $R_i$ - Input Resistance
+* $R_o$ - Output Resistance - Accounts for change in output voltage as the amplifier is utilized to supply more output current to a load. 
+
+When designing an amplifier, $R_o$ should always be smaller than $R_L$. This will maintain a voltage gain greater than 1. 
+
+$$
+\begin{equation}
+    A_v = \dfrac{v_o}{v_i} = A_{vo}\dfrac{R_L}{R_L + R_o}
+\end{equation}
+$$
+
+The input resistance induces a voltage divider action at the input. Where $R_S$ is the resistance from the source to the amplifier.
+
+$$
+\begin{equation}
+    v_i = v_s \dfrac{R_i}{R_i + R_s}
+\end{equation}
+$$
+
+So the effective gain of the circuit including the $R_S$ resistance is.
+$$
+\begin{equation}
+   \boxed{\dfrac{v_o}{v_s} = A_{vo}\dfrac{R_i}{R_i+R_S}\dfrac{R_L}{R_L + R_o}}
+\end{equation}
+$$
 
 ## MOSFET 
 Stands for Metal-Oxide-Semiconductor-Field-Effect transistor

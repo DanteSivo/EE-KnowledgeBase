@@ -26,6 +26,58 @@ $$ \overline{A}CC + \overline{A}BC + A\overline{B}\overline{C} + A\overline{B}C 
 ### SR Latch
 
 ## BJTs
+1. **Determine $I_C$, $I_B$, $I_E$ and $V_C$, $V_B$, $V_E$**
+    ![](images\bjt-question-1.JPG){ width="600" } 
+    Assuming the BJT is in Active Mode, $V_{BE} = 0.7(v)$
+    $$ 
+    \begin{equation}
+    V_{BE} = V_B - V_E = 0.7
+    \\
+    I_C = \beta{}I_{B} = 99I_B 
+    \end{equation}
+    $$
+
+    Taking KVL from B-E
+    $$ 
+    \begin{equation}
+    V_{sig} = R_B I_B - V_{BE} - R_E I_E = 0
+    \\
+    5.7(v) - (10k\Omega{})I_B - 0.7(V) - (2k\Omega{})(\beta{}+1)(I_B)= 0
+    \\
+    \boxed{I_B = 23.8uA}
+    \\
+    I_C = \beta{}I_B = \boxed{2.356mA = I_C}
+    \\
+    I_E = (\beta{} + 1)I_B = \boxed{2.380mA = I_E}
+    \\
+    V_C = V_{CC} - I_C(R_C) = 10.7 - (2.356mA)(1k\Omega{}) = \boxed{8.34(V) = V_C}
+    \\
+    V_E = V_C - V_E = \boxed{3.58(V) = V_E}
+    \end{equation}
+    $$
+
+    Take KVL from C-E
+    $$
+    \begin{equation}
+    V_{sig} - I_C R_C - V_{CE} - I_E(R_E) = 0
+    \\
+    \boxed{V_{CE} = 3.58(V)}
+    \\ V_{CE} = V_{CE} + V_{BE} = \boxed{2.88(V) = V_{CE}}
+    \end{equation}
+    $$
+
+    ==Check that Assumption of Operating Mode is correct==
+    $$
+    \begin{equation}
+    V_{CE} > 0.7(V) \checkmark
+    \\
+    I_B > 0 \checkmark
+    \end{equation}
+    $$
+
+2. **Determine $I_C$ and $V_C$**
+
+
 
 ## Op-Amp
 1. **What does Op-Amp stand for?**

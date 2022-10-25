@@ -88,3 +88,35 @@ Where R is the internal resistance of the motor. So **for no internal resistance
 
 ![](images\impedanceadmittancetable.png){ width="400" }
 
+## Amplifiers
+A generic voltage amplifier commonly used in analog signal amplification due to its simplicity. 
+
+![](images/amplifier-equivalent.JPG){width: "300"}
+
+* $A_{vo}R_i$ - Voltage Controlled Voltage Source
+    * $A_{vo}$ - Gain Factor
+    * $R_i$ - Input Resistance
+* $R_o$ - Output Resistance - Accounts for change in output voltage as the amplifier is utilized to supply more output current to a load. 
+
+When designing an amplifier, $R_o$ should always be smaller than $R_L$. This will maintain a voltage gain greater than 1. 
+
+$$
+\begin{equation}
+    A_v = \dfrac{v_o}{v_i} = A_{vo}\dfrac{R_L}{R_L + R_o}
+\end{equation}
+$$
+
+The input resistance induces a voltage divider action at the input. Where $R_S$ is the resistance from the source to the amplifier.
+
+$$
+\begin{equation}
+    v_i = v_s \dfrac{R_i}{R_i + R_s}
+\end{equation}
+$$
+
+So the effective gain of the circuit including the $R_S$ resistance is.
+$$
+\begin{equation}
+   \boxed{\dfrac{v_o}{v_s} = A_{vo}\dfrac{R_i}{R_i+R_S}\dfrac{R_L}{R_L + R_o}}
+\end{equation}
+$$
