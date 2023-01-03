@@ -77,8 +77,6 @@ $$ \overline{A}CC + \overline{A}BC + A\overline{B}\overline{C} + A\overline{B}C 
 
 2. **Determine $I_C$ and $V_C$**
 
-
-
 ## Op-Amp
 1. **What does Op-Amp stand for?**
 2. 
@@ -153,6 +151,77 @@ $$ \overline{A}CC + \overline{A}BC + A\overline{B}\overline{C} + A\overline{B}C 
             V_{out} = \dfrac{20V}{5} = 4V 
         \end{equation}
     $$
+
+4. **For the given circuit** 
+   
+    ![](images\examples\RC-Example4.PNG){width=500} 
+
+      1. **Right after the switch is closed (t=0)**
+         1. **What is the charge on the cap** 
+            None, so Q = 0C
+         2. **Voltage across the cap** 
+            V = 0. There is no charge but there is current 
+         3. **Current across the resistor** 
+            $$
+            \begin{equation}
+                V=IR \ ,  V=\dfrac{I}{R} = \dfrac{9V}{12\Omega} = 0.75A
+            \end{equation}
+            $$
+         4. **Voltage across the resistor**
+            Vr = 9V
+      2. **Now, when the switch is opened**
+         1. **What is the charge on the cap**
+   
+            $Vc =   9V$. 
+            So since $V=\dfrac{Q}{C}$. Therefore $Q=27\mu{}C$
+
+         2. **Voltage across the cap**
+            
+            $Vc =   9V$. 
+         3. **Current across the resistor**
+            
+            $I = 0$ since there is no potential difference,  $\Delta{}V$
+
+         4. **Voltage across the resistor**
+            
+            $V = 0$
+
+5. ==For the given circuit==
+
+    ![](images\examples\RC-Example5.PNG){width=500}  
+
+     1. **Total Capacitance**
+   
+        $C_T = \dfrac{1}{C_1} + \dfrac{1}{C_2} = 4\mu{}F$
+
+     2. **Current through the 10$\Omega$ resistor**
+
+        $V=IR, \dfrac{V}{R} = I = dfrac{6}{10} = 0.6(A) = I_T$
+        $\dfrac{V_{10}}{R_{10}} = I_{10} = \dfrac{2}{10} = 0.2(A)$
+
+     3. **Voltage across X and Y points**
+
+        V_X - V_Y = V_{R20} - 0 = 4(V)
+
+     4. **Charge on 6$\mu{}F$ cap** 
+
+        $$
+        \begin{equation}
+        Q_6 = Q_{12}
+        Q_T = C_T * V_T = 4\mu{}C * 4(V) = 16\mu{}C
+        \end{equation}
+        $$
+        Charge Sharing: Charge is the same across series capacitors. $Q_6 = Q_{12} = Q_T$
+
+     5. **Voltage across each cap**  
+        $$
+        \begin{equation}
+        Q = CV , \dfrac{Q}{V} = C = \dfrac{16\mu{}C}{C} \\
+        V_6 = \dfrac{16\mu{}C}{6\mu{}F} = 2.67(V) \\
+        V_{12} = \dfrac{16\mu{}C}{12\mu{}F} = 1.33(V) \\
+        \end{equation}
+        $$
+
 ## Advanced Examples
 
 ### Switch Mode Power Supply
