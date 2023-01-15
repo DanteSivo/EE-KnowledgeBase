@@ -237,7 +237,6 @@ $$ \overline{A}CC + \overline{A}BC + A\overline{B}\overline{C} + A\overline{B}C 
       V_{12} = \dfrac{16\mu{}C}{12\mu{}F} = 1.33(V) \\
       \end{equation}
       $$
-
 ## RL Circuits
 ### Example 1
 
@@ -246,13 +245,13 @@ $$ \overline{A}CC + \overline{A}BC + A\overline{B}\overline{C} + A\overline{B}C 
    ![](images\examples\RL-Circuits\RL-Example1.PNG){width=500}  
 
    1. **When the switch is closed after being open for some time.**
-       1.   **Current through the circuit**
-       2.  **Voltage across the resistor**
-       3.  **Voltage across the inductor**
+       1.  **Current through the circuit** $I = 0$
+       2.  **Voltage across the resistor** $V_R = 0$
+       3.  **Voltage across the inductor** $V_L = 12V$
    2. **After being closed for a long period of time...**
-       1.   **Current through the circuit**
-       2.  **Voltage across the resistor**
-       3.  **Voltage across the inductor**
+       1.  **Current through the circuit** $I = V/R = \dfrac{12V}{10k} = 1.2mA$
+       2.  **Voltage across the resistor** $V_R = 12V$
+       3.  **Voltage across the inductor** $V_L = 0V$
 
 ### Example 2
 
@@ -261,15 +260,15 @@ $$ \overline{A}CC + \overline{A}BC + A\overline{B}\overline{C} + A\overline{B}C 
    ![](images\examples\RL-Circuits\RL-Example2.PNG){width=500}  
 
    1. **When the switch is closed after being open for some time.**
-       1.  **Current through the circuit**
-       2.  **Voltage across the inductor**
-       3.  **Voltage across the 5$\Omega$ Resistor**
-       4.  **Voltage across the 3$\Omega$ Resistor**
+       1.  **Current through the circuit** $I = 0$
+       2.  **Voltage across the inductor** $V_L = 24V$
+       3.  **Voltage across the 5$\Omega$ Resistor** $V_5 = 0$
+       4.  **Voltage across the 3$\Omega$ Resistor** $V_3 = 0$
    2. **After being closed for a long period of time...**
-       1.  **Current through the circuit**
-       2.  **Voltage across the inductor**
-       3.  **Voltage across the 5$\Omega$ Resistor**
-       4.  **Voltage across the 3$\Omega$ Resistor**
+       1.  **Current through the circuit** $I = V/R = 24V/(5+3) = 3A$
+       2.  **Voltage across the inductor** $V_L = 0$
+       3.  **Voltage across the 5$\Omega$ Resistor** $V_5 = IR = (3)(5) = 15V$
+       4.  **Voltage across the 3$\Omega$ Resistor** $V_3 = IR = (3)(3) = 9V$
 
 ### Example 3
 
@@ -278,29 +277,29 @@ $$ \overline{A}CC + \overline{A}BC + A\overline{B}\overline{C} + A\overline{B}C 
    ![](images\examples\RL-Circuits\RL-Example3.PNG){width=500}  
 
    1. **When the switch is closed after being open for some time.**
-       1.  **Current through the inductor**
-       2.  **Current through the circuit**
-       3.  **Current through the 4$\Omega$ resistor**
-       4.  **Current through the 8$\Omega$ resistor**
-       5.  **Voltage across the inductor**
-       6.  **Voltage across the 8$\Omega$ resistor**
-       7.  **Voltage across the 4$\Omega$ resistor**
+       1.  **Current through the inductor** $I_L = 0A$
+       2.  **Current through the circuit** $I = V/R = \dfrac{24}{12} = 2A$
+       3.  **Current through the 4$\Omega$ resistor** $I_4 = 2A$
+       4.  **Current through the 8$\Omega$ resistors** $I_8 = 2A$
+       5.  **Voltage across the inductor** $V_L = 16V$
+       6.  **Voltage across the 8$\Omega$ resistors** $V_8 = IR = (2)(8) = 16V$
+       7.  **Voltage across the 4$\Omega$ resistor** $V_4 = IR = (2)(4) = 8V$
    2. **After being closed for a long period of time...**
-       1.  **Current through the inductor**
-       2.  **Current through the circuit**
-       3.  **Current through the 4$\Omega$ resistor**
-       4.  **Current through the 8$\Omega$ resistor**
-       5.  **Voltage across the inductor**
-       6.  **Voltage across the 8$\Omega$ resistor**
-       7.  **Voltage across the 4$\Omega$ resistor**
+       1.  **Current through the inductor** $I_L = 1.5A$
+       2.  **Current through the circuit** $I = V/R = \dfrac{24}{(4+(8//8)} = 3A$
+       3.  **Current through the 4$\Omega$ resistor** $I_4 = 3A$
+       4.  **Current through the 8$\Omega$ resistors** $I_8 = 1.5A$
+       5.  **Voltage across the inductor** $V_L = 0V$
+       6.  **Voltage across the 8$\Omega$ resistors** $V_8 = 12V$
+       7.  **Voltage across the 4$\Omega$ resistor** $V_4 = IR = (3)(4) = 12V$
    3. **The switch is now opened**
-       1.  **Current through the inductor**
-       2.  **Current through the circuit**
-       3.  **Current through the 4$\Omega$ resistor**
-       4.  **Current through the 8$\Omega$ resistor**
-       5.  **Voltage across the inductor**
-       6.  **Voltage across the 8$\Omega$ resistor**
-       7.  **Voltage across the 4$\Omega$ resistor**
+       1.  **Current through the inductor** $I_L = -1.5A$
+       2.  **Current through the circuit** $I = 0$
+       3.  **Current through the 4$\Omega$ resistor** $I_4 = 0$
+       4.  **Current through the 8$\Omega$ resistors** $I_8 = -1.5A$ <- Reverse current due to back EMF from inductor
+       5.  **Voltage across the inductor** $V_L = -24V$ <- Opposite of load
+       6.  **Voltage across the 8$\Omega$ resistors** $V_8 = IR = (-1.5)(8) = 12$
+       7.  **Voltage across the 4$\Omega$ resistor** $V_4 = 0$
 
 ### Example 4
 
@@ -309,25 +308,25 @@ $$ \overline{A}CC + \overline{A}BC + A\overline{B}\overline{C} + A\overline{B}C 
    ![](images\examples\RL-Circuits\RL-Example4.PNG){width=500}  
 
    1. **When the switch is closed after being open for some time.**
-       1.  **Current through the inductor**
-       2.  **Current through the circuit**
-       3.  **Current through the 4$\Omega$ resistor**
-       4.  **Current through the 8$\Omega$ resistor**
-       5.  **Charge on the capacitor**
-       6.  **Voltage across the capacitor**
-       7.  **Voltage across the 8$\Omega$ resistor**
-       8.  **Voltage across the 4$\Omega$ resistor**
-       9.  **Voltage across the inductor**
+       1.  **Current through the inductor** $I_L = 0$
+       2.  **Current through the circuit** $I = V/R = \dfrac{10V}{4} = 2.5A$
+       3.  **Current through the 4$\Omega$ resistor** $I_4 = 2.5A$
+       4.  **Current through the 8$\Omega$ resistor** $I_8 = 0A$
+       5.  **Charge on the capacitor** $Q = 0C$
+       6.  **Voltage across the capacitor** $V_C = 0$
+       7.  **Voltage across the 8$\Omega$ resistor** $V_8 = 0$
+       8.  **Voltage across the 4$\Omega$ resistor** $V_4 = 0$
+       9.  **Voltage across the inductor** $V_L = 10$
    2. **After a long time being closed...**
-       1.  **Current through the inductor**
-       2.  **Current through the circuit**
-       3.  **Current through the 4$\Omega$ resistor**
-       4.  **Current through the 8$\Omega$ resistor**
-       5.  **Charge on the capacitor**
-       6.  **Voltage across the capacitor**
-       7.  **Voltage across the 8$\Omega$ resistor**
-       8.  **Voltage across the 4$\Omega$ resistor**
-       9.  **Voltage across the inductor**
+       1.  **Current through the inductor** $I_L = 1.25A$
+       2.  **Current through the circuit** $I = V/R = \dfrac{10V}{8} = 1.25A$
+       3.  **Current through the 4$\Omega$ resistor** $I_4 = 0$
+       4.  **Current through the 8$\Omega$ resistor** $I_8 = 1.25A$
+       5.  **Charge on the capacitor** $Q = VC = (10V)(0.5F) = 5C$
+       6.  **Voltage across the capacitor** $V_C = 10V$
+       7.  **Voltage across the 8$\Omega$ resistor** $V_8 = 10V$
+       8.  **Voltage across the 4$\Omega$ resistor** $V_4 = 0$
+       9.  **Voltage across the inductor** $V_L = 0$
 
 ## Advanced Examples
 
