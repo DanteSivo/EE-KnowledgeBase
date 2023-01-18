@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Circuit Analysis - EE Knowledge Base</title>
+    <title>LASERs 101 - EE Knowledge Base</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Circuit Analysis";
-        var mkdocs_page_input_path = "Circuit Analysis.md";
+        var mkdocs_page_name = "LASERs 101";
+        var mkdocs_page_input_path = "LASERs 101.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -52,22 +52,8 @@
                 <li class="toctree-l1"><a class="reference internal" href="../BJT%20Designs/">BJT Designs</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">Circuit Analysis</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#kirchhoffs-voltage-law-kvl">Kirchhoff's Voltage Law (KVL)</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#kirchhoffs-current-law-kcl">Kirchhoff's Current Law (KCL)</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#circuit-simulators">Circuit Simulators</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#falstad">FALSTAD</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#spice">SPICE</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Circuit%20Analysis/">Circuit Analysis</a>
                 </li>
               </ul>
               <ul>
@@ -86,8 +72,30 @@
                 <li class="toctree-l1"><a class="reference internal" href="../Interview%20Questions/">Interview Questions</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../LASERs%20101/">LASERs 101</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">LASERs 101</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#part-i">Part I</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#why-are-lasers-cool">Why are LASERs cool?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#laser-properies">LASER Properies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pulse-lasers">Pulse LASERs</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#q-switching">Q-Switching</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#amplifier-chain">Amplifier Chain</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fusion">Fusion</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#laser-emissions">Laser Emissions</a>
+    </li>
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -120,7 +128,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>Circuit Analysis</li>
+      <li>LASERs 101</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -129,33 +137,87 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="circuit-analysis">Circuit Analysis</h1>
-<p>Documentation for basic circuit analysis techniques that can be used in all circuits</p>
-<h2 id="kirchhoffs-voltage-law-kvl">Kirchhoff's Voltage Law (KVL)</h2>
-<p><mark>The voltage into and out of any given node is zero</mark>
-<script type="math/tex; mode=display">
-\begin{equation}
-    \Sigma{V} = 0
-\end{equation}
-</script>
-</p>
-<p><img alt="" src="../images/KVL_Circuit.jpg" width="300" /></p>
-<h2 id="kirchhoffs-current-law-kcl">Kirchhoff's Current Law (KCL)</h2>
-<p><mark>The amount of current entering and exiting a node is equal</mark>
-<img alt="" src="../images/KCL_Circuit.gif" width="400" /></p>
-<h2 id="circuit-simulators">Circuit Simulators</h2>
-<h3 id="falstad">FALSTAD</h3>
-<p>An <a href="https://www.falstad.com/circuit/">Online Simulator</a> that demonstrates the current flow of a specified electrical signal in an animated format.</p>
-<p><img alt="" src="../images/FALSTAD-GIF.gif" /></p>
-<p><strong>NOTE</strong> - FALSTAD is <strong>NOT</strong> SPICE based. This means that while the components in FALSTAD are closely coorilated to SPICE, they are not 1 to 1. </p>
-<h3 id="spice">SPICE</h3>
-<p>AKA Simulation Program with Integrated Circuit Emphasis. First developed in the 70s, SPICE has evolved into the primary circuit simulation software world wide. Highly configurable with detailed settings. <a href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html">LTSpice</a> is a common light-weight program used around the world.</p>
+                <h1 id="lasers-101">LASERs 101</h1>
+<p>These notes are based off of a series called "Laser Fundamentals" produced by Dr. Shaoul Ezekiel and published by MIT OpenCourseWare</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=saVE7pMhaxk&amp;list=PLX22u5cw7gIWC1djhphKPBabbReVpTpxU&amp;index=20">Laser Fundamentals I</a></li>
+<li><a href="https://www.youtube.com/watch?v=urbZ8CTceu0">Laser Fundamentals II</a></li>
+<li><a href="https://www.youtube.com/watch?v=_qixt0NLc9I">Laser Fundamentals III</a></li>
+<li><a href="https://www.youtube.com/watch?v=slNPMzQ4Nhw">Laser Fundamentals III - Continued</a></li>
+</ul>
+<p>Other Material used</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=hcGgaa2mFc4">The Extreme World of Ultra Intense Lasers - with Kate Lancaster</a></li>
+</ul>
+<h2 id="part-i">Part I</h2>
+<h3 id="why-are-lasers-cool">Why are LASERs cool?</h3>
+<ul>
+<li>Fantastic Applications<ul>
+<li>bar code readers</li>
+<li>compact disks</li>
+<li>LASER "shows"</li>
+<li>color copiers</li>
+<li>sensors</li>
+<li>military systems</li>
+<li>non-destructive testing</li>
+<li><mark>fiberoptic communication</mark> &lt;&lt; focus of most applications</li>
+<li>medical procedures</li>
+</ul>
+</li>
+</ul>
+<h3 id="laser-properies">LASER Properies</h3>
+<ol>
+<li>Visible Range - Able to pick from a wide series of bands</li>
+<li>Tight Spectrum Width - Precise control of the wavelength of the LASER
+   <img alt="" src="../images/LASERs/LASER-WavelengthRangeComparison.PNG" width="500" /></li>
+<li>High Temperal Coherenece<ul>
+<li>Effectivley, the transmission of the beam continously is much larger than over conditional sources.</li>
+<li>The smaller the width, <span class="arithmatex">\(\Delta{}f\)</span> the longer the <span class="arithmatex">\(\tau{}\)</span></li>
+<li>Lets us predict the amplitude and phase at any posistion<ul>
+<li>Useful for communication, sensors, spectroscopy, etc.
+<img alt="" src="../images/LASERs/LASER-TemperalCoherence-1.PNG" width="500" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Intensity<ul>
+<li>Power = Intesity / Area<ul>
+<li>So either provide a LOT of power, or use a small area.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="pulse-lasers">Pulse LASERs</h3>
+<h4 id="q-switching">Q-Switching</h4>
+<ul>
+<li>Precharge the LASER before emitting. Then open the cavity to release the charge, and recieve a pulse.</li>
+<li>Do this fast enough and you can get what appears to be a continous beam of high powered energy. </li>
+</ul>
+<h4 id="amplifier-chain">Amplifier Chain</h4>
+<ul>
+<li>A single LASER emission will go through a series of small and large rod amplifiers to add power to the beam. After a enough of these, a larger amplifier may be required, called a lense amplifier.</li>
+</ul>
+<h2 id="fusion">Fusion</h2>
+<p>TLDR. Deuterium + Tritium = Helium + Neutron
+<img alt="" src="../images/LASERs/Schematic-representation-of-a-nuclear-fusion-reaction.png" width="500" /></p>
+<ul>
+<li>Since there is a mass loss. In order to sustain <span class="arithmatex">\(E=MC^2\)</span>, energy is produced!</li>
+<li>We can use this to heat water to produce steam.</li>
+<li>You can stop the reaction by removing the energy source.</li>
+</ul>
+<p><img alt="" src="../images/LASERs/fusion-explaination.PNG" width="700" /></p>
+<h2 id="laser-emissions">Laser Emissions</h2>
+<ol>
+<li>Atom gains charge that it will want to release</li>
+<li>The atom releases that charge in the form of a photon</li>
+</ol>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../BJT%20Designs/" class="btn btn-neutral float-left" title="BJT Designs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Circuit%20Devices/" class="btn btn-neutral float-right" title="Circuit Devices">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Interview%20Questions/" class="btn btn-neutral float-left" title="Interview Questions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../MarkdownTemplate/" class="btn btn-neutral float-right" title="Markdown Template">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -178,10 +240,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../BJT%20Designs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Interview%20Questions/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Circuit%20Devices/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../MarkdownTemplate/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

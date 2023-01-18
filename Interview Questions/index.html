@@ -45,7 +45,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../AC%20Circuits/">AC Circuits</a>
+                <li class="toctree-l1"><a class="reference internal" href="../Analog%20Circuits/">Analog Circuits</a>
                 </li>
               </ul>
               <ul>
@@ -65,7 +65,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../DC%20Circuits/">DC Circuits</a>
+                <li class="toctree-l1"><a class="reference internal" href="../Digital%20Circuits/">Digital Circuits</a>
                 </li>
               </ul>
               <ul class="current">
@@ -90,6 +90,32 @@
     <li class="toctree-l2"><a class="reference internal" href="#op-amp">Op-Amp</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#rc-circuits">RC Circuits</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-1">Example 1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-2">Example 2</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-3">Example 3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-4">Example 4</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-5">Example 5</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-6">Example 6</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rl-circuits">RL Circuits</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-1_1">Example 1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-2_1">Example 2</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-3_1">Example 3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-4_1">Example 4</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#advanced-examples">Advanced Examples</a>
         <ul>
@@ -98,6 +124,10 @@
         </ul>
     </li>
     </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LASERs%20101/">LASERs 101</a>
                 </li>
               </ul>
               <ul>
@@ -145,28 +175,28 @@
 <h2 id="basic-questions">Basic Questions</h2>
 <ol>
 <li>
-<p><strong>What is the Equation of a Voltage Divider?</strong></p>
+<p><mark>What is the Equation of a Voltage Divider?</mark></p>
 </li>
 <li>
-<p><strong>What is the definition of Capacitance?</strong></p>
+<p><mark>What is the definition of Capacitance?</mark></p>
 </li>
 <li>
-<p><strong>How does a FPGA differ from a Microprocessor?</strong></p>
+<p><mark>How does a FPGA differ from a Microprocessor?</mark></p>
 </li>
 <li>
-<p><strong>How do ADC's work?</strong></p>
+<p><mark>How do ADC's work?</mark></p>
 </li>
 <li>
-<p><strong>What is the point of impedance matching?</strong></p>
+<p><mark>What is the point of impedance matching?</mark></p>
 </li>
 <li>
-<p><strong>How does a BJT work?</strong></p>
+<p><mark>How does a BJT work?</mark></p>
 </li>
 <li>
-<p><strong>How does a MOSFET work?</strong></p>
+<p><mark>How does a MOSFET work?</mark></p>
 </li>
 <li>
-<p><strong>How does an H-Bridge work?</strong></p>
+<p><mark>How does an H-Bridge work?</mark></p>
 </li>
 </ol>
 <h2 id="boolean-alegbra">Boolean Alegbra</h2>
@@ -175,35 +205,197 @@
 <h2 id="digital-logic">Digital Logic</h2>
 <h3 id="sr-latch">SR Latch</h3>
 <h2 id="bjts">BJTs</h2>
+<ol>
+<li><mark>Determine <span class="arithmatex">\(I_C\)</span>, <span class="arithmatex">\(I_B\)</span>, <span class="arithmatex">\(I_E\)</span> and <span class="arithmatex">\(V_C\)</span>, <span class="arithmatex">\(V_B\)</span>, <span class="arithmatex">\(V_E\)</span></mark>
+    <img alt="" src="../images/bjt-question-1.JPG" width="600" /> </li>
+</ol>
 <h2 id="op-amp">Op-Amp</h2>
 <ol>
-<li><strong>What does Op-Amp stand for?</strong></li>
+<li><mark>What does Op-Amp stand for?</mark></li>
 <li></li>
 </ol>
 <h2 id="rc-circuits">RC Circuits</h2>
-<ol>
-<li>
-<p><strong>Sketch the output given the input for the two circuits.</strong></p>
-<p><img alt="" src="../images/RC-Circuits-Q1.JPG" width="600" /> </p>
-</li>
-<li>
-<p><strong>Given the circuit starts open, when SW1 closes. What is the voltage accross C1 and C2?</strong></p>
-<p><img alt="" src="../images/RC-Circuits-Q2.JPG" width="600" /></p>
+<h3 id="example-1">Example 1</h3>
+<p><mark>Sketch the output given the input for the two circuits.</mark></p>
+<p><img alt="" src="../images/RC-Circuits-Q1.JPG" width="300" /> </p>
+<h3 id="example-2">Example 2</h3>
+<p><mark>Given the circuit starts open, when SW1 closes. What is the voltage accross C1 and C2?</mark></p>
+<p><img alt="" src="../images/RC-Circuits-Q2.JPG" width="400" /></p>
 <p><strong>Now, SW1 opens and SW2 closes. What is the voltage across C1 and C2 given SW1 has been closed for a long time?</strong></p>
+<h3 id="example-3">Example 3</h3>
+<p><mark>When SW1 closes what is Vout?</mark></p>
+<p><img alt="" src="../images/RC-Circuits-Q3.JPG" width="400" /></p>
+<h3 id="example-4">Example 4</h3>
+<p><mark>For the given circuit</mark></p>
+<p><img alt="" src="../images/examples/RC-Example4.PNG" width="500" />  </p>
+<ol>
+<li><strong>Right after the switch is closed (t=0)</strong><ol>
+<li><strong>What is the charge on the cap</strong></li>
+<li><strong>Voltage across the cap</strong></li>
+<li><strong>Current across the resistor</strong></li>
+<li><strong>Voltage across the resistor</strong></li>
+</ol>
 </li>
-<li>
-<p><strong>When SW1 closes what is Vout?</strong></p>
-<p><img alt="" src="../images/RC-Circuits-Q3.JPG" width="500" /></p>
-<h2 id="advanced-examples">Advanced Examples</h2>
+<li><strong>Now, when the switch is opened</strong><ol>
+<li><strong>What is the charge on the cap</strong></li>
+<li><strong>Voltage across the cap</strong></li>
+<li><strong>Current across the resistor</strong></li>
+<li><strong>Voltage across the resistor</strong></li>
+</ol>
 </li>
 </ol>
+<h3 id="example-5">Example 5</h3>
+<p><mark>For the given circuit find...</mark></p>
+<p><img alt="" src="../images/examples/RC-Example5.PNG" width="500" />  </p>
+<ol>
+<li>
+<p><strong>Total Capacitance</strong></p>
+</li>
+<li>
+<p><strong>Current through the 10<span class="arithmatex">\(\Omega\)</span> resistor</strong></p>
+</li>
+<li>
+<p><strong>Voltage across X and Y points</strong></p>
+</li>
+<li>
+<p><strong>Charge on 6<span class="arithmatex">\(\mu{}F\)</span> cap</strong> </p>
+</li>
+<li>
+<p><strong>Voltage across each cap</strong></p>
+</li>
+</ol>
+<h3 id="example-6">Example 6</h3>
+<p><mark>For the given circuit</mark></p>
+<p><img alt="" src="../images/examples/RC-Example6.PNG" width="500" />  </p>
+<ol>
+<li>
+<p><strong>When the switch is closed after being open for some time.</strong></p>
+<ol>
+<li><strong>What will the voltage on the cap be after 2 time constants</strong></li>
+<li><strong>What will the voltage on the cap be after 6 seconds</strong></li>
+<li><strong>When will it be fully charged</strong></li>
+<li><strong>When will the current be reduced by 25%</strong></li>
+</ol>
+</li>
+<li>
+<p><strong>Given the switch is opened after a period of time.</strong></p>
+<ol>
+<li><strong>What will the voltage on the cap be after 2 time constants</strong></li>
+<li><strong>What will the voltage on the cap be after 6 seconds</strong></li>
+<li><strong>When will it be fully discharged</strong></li>
+<li><strong>When will the current be 25% of the maximum current</strong></li>
+</ol>
+</li>
+</ol>
+<h2 id="rl-circuits">RL Circuits</h2>
+<h3 id="example-1_1">Example 1</h3>
+<p><mark>For the given circuit find...</mark></p>
+<p><img alt="" src="../images/examples/RL-Circuits/RL-Example1.PNG" width="500" />  </p>
+<ol>
+<li><strong>When the switch is closed after being open for some time.</strong><ol>
+<li><strong>Current through the circuit</strong></li>
+<li><strong>Voltage across the resistor</strong></li>
+<li><strong>Voltage across the inductor</strong></li>
+</ol>
+</li>
+<li><strong>After being closed for a long period of time...</strong><ol>
+<li><strong>Current through the circuit</strong></li>
+<li><strong>Voltage across the resistor</strong></li>
+<li><strong>Voltage across the inductor</strong></li>
+</ol>
+</li>
+</ol>
+<h3 id="example-2_1">Example 2</h3>
+<p><mark>For the given circuit find...</mark></p>
+<p><img alt="" src="../images/examples/RL-Circuits/RL-Example2.PNG" width="500" />  </p>
+<ol>
+<li><strong>When the switch is closed after being open for some time.</strong><ol>
+<li><strong>Current through the circuit</strong></li>
+<li><strong>Voltage across the inductor</strong></li>
+<li><strong>Voltage across the 5<span class="arithmatex">\(\Omega\)</span> Resistor</strong></li>
+<li><strong>Voltage across the 3<span class="arithmatex">\(\Omega\)</span> Resistor</strong></li>
+</ol>
+</li>
+<li><strong>After being closed for a long period of time...</strong><ol>
+<li><strong>Current through the circuit</strong></li>
+<li><strong>Voltage across the inductor</strong></li>
+<li><strong>Voltage across the 5<span class="arithmatex">\(\Omega\)</span> Resistor</strong></li>
+<li><strong>Voltage across the 3<span class="arithmatex">\(\Omega\)</span> Resistor</strong></li>
+</ol>
+</li>
+</ol>
+<h3 id="example-3_1">Example 3</h3>
+<p><mark>For the given circuit find...</mark></p>
+<p><img alt="" src="../images/examples/RL-Circuits/RL-Example3.PNG" width="500" />  </p>
+<ol>
+<li><strong>When the switch is closed after being open for some time.</strong><ol>
+<li><strong>Current through the inductor</strong></li>
+<li><strong>Current through the circuit</strong></li>
+<li><strong>Current through the 4<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Current through the 8<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Voltage across the inductor</strong></li>
+<li><strong>Voltage across the 8<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Voltage across the 4<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+</ol>
+</li>
+<li><strong>After being closed for a long period of time...</strong><ol>
+<li><strong>Current through the inductor</strong></li>
+<li><strong>Current through the circuit</strong></li>
+<li><strong>Current through the 4<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Current through the 8<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Voltage across the inductor</strong></li>
+<li><strong>Voltage across the 8<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Voltage across the 4<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+</ol>
+</li>
+<li><strong>The switch is now opened</strong><ol>
+<li><strong>Current through the inductor</strong></li>
+<li><strong>Current through the circuit</strong></li>
+<li><strong>Current through the 4<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Current through the 8<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Voltage across the inductor</strong></li>
+<li><strong>Voltage across the 8<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Voltage across the 4<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+</ol>
+</li>
+</ol>
+<h3 id="example-4_1">Example 4</h3>
+<p><mark>For the given circuit find...</mark></p>
+<p><img alt="" src="../images/examples/RL-Circuits/RL-Example4.PNG" width="500" />  </p>
+<ol>
+<li><strong>When the switch is closed after being open for some time.</strong><ol>
+<li><strong>Current through the inductor</strong></li>
+<li><strong>Current through the circuit</strong></li>
+<li><strong>Current through the 4<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Current through the 8<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Charge on the capacitor</strong></li>
+<li><strong>Voltage across the capacitor</strong></li>
+<li><strong>Voltage across the 8<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Voltage across the 4<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Voltage across the inductor</strong></li>
+</ol>
+</li>
+<li><strong>After a long time being closed...</strong><ol>
+<li><strong>Current through the inductor</strong></li>
+<li><strong>Current through the circuit</strong></li>
+<li><strong>Current through the 4<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Current through the 8<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Charge on the capacitor</strong></li>
+<li><strong>Voltage across the capacitor</strong></li>
+<li><strong>Voltage across the 8<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Voltage across the 4<span class="arithmatex">\(\Omega\)</span> resistor</strong></li>
+<li><strong>Voltage across the inductor</strong></li>
+</ol>
+</li>
+</ol>
+<h2 id="advanced-examples">Advanced Examples</h2>
 <h3 id="switch-mode-power-supply">Switch Mode Power Supply</h3>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../DC%20Circuits/" class="btn btn-neutral float-left" title="DC Circuits"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../MarkdownTemplate/" class="btn btn-neutral float-right" title="Markdown Template">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Digital%20Circuits/" class="btn btn-neutral float-left" title="Digital Circuits"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../LASERs%20101/" class="btn btn-neutral float-right" title="LASERs 101">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -226,10 +418,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../DC%20Circuits/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Digital%20Circuits/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../MarkdownTemplate/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../LASERs%20101/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

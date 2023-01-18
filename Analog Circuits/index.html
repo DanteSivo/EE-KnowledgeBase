@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>DC Circuits - EE Knowledge Base</title>
+    <title>Analog Circuits - EE Knowledge Base</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "DC Circuits";
-        var mkdocs_page_input_path = "DC Circuits.md";
+        var mkdocs_page_name = "Analog Circuits";
+        var mkdocs_page_input_path = "Analog Circuits.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -44,8 +44,10 @@
                 <li class="toctree-l1"><a class="reference internal" href="..">Welcome to MkDocs</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../AC%20Circuits/">AC Circuits</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Analog Circuits</a>
+    <ul class="current">
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -64,16 +66,16 @@
                 <li class="toctree-l1"><a class="reference internal" href="../Circuit%20Fundametals/">Circuit Fundamentals</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">DC Circuits</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#voltage-divider">Voltage Divider</a>
-    </li>
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Digital%20Circuits/">Digital Circuits</a>
                 </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../Interview%20Questions/">Interview Questions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LASERs%20101/">LASERs 101</a>
                 </li>
               </ul>
               <ul>
@@ -106,7 +108,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>DC Circuits</li>
+      <li>Analog Circuits</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -115,7 +117,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="dc-circuits">DC Circuits</h1>
+                <h1 id="analog-circuits">Analog Circuits</h1>
+<p>Circuits that consist of more than two voltage states.</p>
+<h1 id="digital-circuits">Digital Circuits</h1>
 <h2 id="voltage-divider">Voltage Divider</h2>
 <p>Divides the voltage in based on the resistances of the divider.</p>
 <p><img alt="" src="../images/voltage-divider.png" width="200" /> 
@@ -123,12 +127,52 @@
 V_{out} = V_{in} \cdot{} \dfrac{R_2}{R_1 + R_2}
 </script>
 </p>
+<h2 id="rc-circuits">RC Circuits</h2>
+<p>A capacitor in series with a transmission line will take some time to charge. </p>
+<ul>
+<li>For a DC Circuit, charged capacitors act like a wire</li>
+<li>For a AC Circuit, capacitors are considered open until charged.</li>
+</ul>
+<p><span class="arithmatex">\(RC\)</span>  is considered the <em>time constant</em> <span class="arithmatex">\(\tau{}\)</span></p>
+<div class="arithmatex">\[
+\tau{} = RC
+\]</div>
+<p>Current is produced by voltage differences in the circuit. The voltage on a capacitor is...</p>
+<div class="arithmatex">\[
+\begin{equation}
+    V = \dfrac{Q}{C}
+\end{equation}
+\]</div>
+<p><mark>Charging Equation</mark> - Voltage on capacitor while accumulating current
+<script type="math/tex; mode=display">
+\begin{equation}
+v(t) = v_o \cdot{} (1-e^{{-t}/{RC}}) << Increasing \ Voltage \\
+I(t) = I_o \cdot{} (1-e^{{-t}/{RC}}) << Decreasing \ Current
+\end{equation}
+</script>
+<img _400_="&quot;400&quot;" alt="" src="../images/RC-ChargingSim.JPG" width:="width:" />
+SPICE Sim -&gt; <a href="../SPICE-files/RC-Charging.asc">Click to Download</a></p>
+<p><mark>Discharging Equation</mark> - Voltage on capacitor while discharging current
+<script type="math/tex; mode=display">
+\begin{equation}
+v(t) = v_o \cdot{} e^{{-t}/{RC}} << Decreasing \ Voltage\\ 
+I(t) = I_o \cdot{} e^{{-t}/{RC}} << Increasing \ Current 
+\end{equation}
+</script>
+<img _400_="&quot;400&quot;" alt="" src="../images/RC-DischargingSim.JPG" width:="width:" />
+SPICE Sim -&gt; <a href="../SPICE-files/RC-Discharging.asc">Click to Download</a></p>
+<p>For Circuit Analysis (note Voltage and Current are inversely related)</p>
+<ul>
+<li>0.7<span class="arithmatex">\(\tau{}\)</span> = 50%</li>
+<li>5<span class="arithmatex">\(\tau{}\)</span> = 100%  </li>
+</ul>
+<p><img alt="" src="../images/time-constant-chart.jpg" width="400" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../Circuit%20Fundametals/" class="btn btn-neutral float-left" title="Circuit Fundamentals"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../Interview%20Questions/" class="btn btn-neutral float-right" title="Interview Questions">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href=".." class="btn btn-neutral float-left" title="Welcome to MkDocs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../BJT%20Designs/" class="btn btn-neutral float-right" title="BJT Designs">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -151,10 +195,10 @@ V_{out} = V_{in} \cdot{} \dfrac{R_2}{R_1 + R_2}
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../Circuit%20Fundametals/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../Interview%20Questions/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../BJT%20Designs/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

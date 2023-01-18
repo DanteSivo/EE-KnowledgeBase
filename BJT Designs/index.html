@@ -45,7 +45,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../AC%20Circuits/">AC Circuits</a>
+                <li class="toctree-l1"><a class="reference internal" href="../Analog%20Circuits/">Analog Circuits</a>
                 </li>
               </ul>
               <ul class="current">
@@ -53,7 +53,15 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#current-mirror-current-source-current-sink">Current Mirror / Current Source / Current Sink</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#basic-example">Basic Example</a>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-application">Basic Application</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_1"></a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#1">1.</a>
+    </li>
+        </ul>
     </li>
         </ul>
     </li>
@@ -64,6 +72,14 @@
         </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#common-mode-amplifier">Common Mode Amplifier</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cascode-amplifier">Cascode Amplifier</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#bjt-simple-cascode-amplifier">BJT Simple Cascode Amplifier \</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mosfet-simple-cascode-amplifier">MOSFET Simple Cascode Amplifier \</a>
+    </li>
+        </ul>
     </li>
     </ul>
                 </li>
@@ -81,11 +97,15 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../DC%20Circuits/">DC Circuits</a>
+                <li class="toctree-l1"><a class="reference internal" href="../Digital%20Circuits/">Digital Circuits</a>
                 </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../Interview%20Questions/">Interview Questions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LASERs%20101/">LASERs 101</a>
                 </li>
               </ul>
               <ul>
@@ -131,6 +151,7 @@
 <p>Some general designs with their applications.</p>
 <h2 id="current-mirror-current-source-current-sink">Current Mirror / Current Source / Current Sink</h2>
 <p><img alt="" src="../images/currentmirrorcircuit.PNG" width="250" /></p>
+<h3 id="basic-application">Basic Application</h3>
 <p>The collector current on both BJTs is equivalent. As a result, <span class="arithmatex">\(V_{BE1} = V_{BE2}\)</span>.</p>
 <p>For Q1:
 <script type="math/tex; mode=display"> 
@@ -160,12 +181,16 @@ I_{REF} = I_E = \dfrac{V_{EE} - 0.7(V)}{R}
     \end{equation}
 </script>
 </p>
-<h3 id="basic-example">Basic Example</h3>
+<h3 id="_1"></h3>
+<h3 id="examples">Examples</h3>
+<h4 id="1">1.</h4>
 <p><img _="," align="left" alt="" src="../images/currentsource-example1.PNG" width="350" /></p>
 <ol>
 <li>Simplfy into functional diagram and add test source (vtest)
     <img alt="" src="../images/currentsource-exampleanwser1.PNG" width="300" /></li>
-<li>$$r\pi{} = \Beta{}(V_T/1mA)</li>
+<li>
+<div class="arithmatex">\[r\pi{} = \beta{}(V_T/1mA)\]</div>
+</li>
 </ol>
 <h2 id="differential-amplifier">Differential Amplifier</h2>
 <p>Consisting of at least two BJTs. Generally, a known current, <strong>Ie</strong>, will be the primary consideration for the design. </p>
@@ -265,11 +290,30 @@ Differential Mode Input Resistance: <span class="arithmatex">\(\boxed{Rid = 2r\p
 </ul>
 <p>Microelectronic Circuits by Dedra &amp; Smith -&gt; Chapter 9</p>
 <h2 id="common-mode-amplifier">Common Mode Amplifier</h2>
+<h2 id="cascode-amplifier">Cascode Amplifier</h2>
+<ul>
+<li>
+<p><strong>Pros</strong>:</p>
+<ul>
+<li>Higher Output Resistance</li>
+</ul>
+</li>
+<li>
+<p><strong>Cons</strong>:</p>
+<ul>
+<li>The input voltage needs to be great enough to turn on both transistors into the saturation region. <span class="arithmatex">\(V_1 &gt;= V_{CE_{SAT}}\)</span></li>
+</ul>
+</li>
+</ul>
+<h3 id="bjt-simple-cascode-amplifier">BJT Simple Cascode Amplifier \</h3>
+<p>A Common Emitter (CE) stacked with a Common Base (CB).</p>
+<h3 id="mosfet-simple-cascode-amplifier">MOSFET Simple Cascode Amplifier \</h3>
+<p>A Common Source (CS) stacked with a Common Gate (CG).</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../AC%20Circuits/" class="btn btn-neutral float-left" title="AC Circuits"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Analog%20Circuits/" class="btn btn-neutral float-left" title="Analog Circuits"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../Circuit%20Analysis/" class="btn btn-neutral float-right" title="Circuit Analysis">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -293,7 +337,7 @@ Differential Mode Input Resistance: <span class="arithmatex">\(\boxed{Rid = 2r\p
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../AC%20Circuits/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../Analog%20Circuits/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../Circuit%20Analysis/" style="color: #fcfcfc">Next &raquo;</a></span>

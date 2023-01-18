@@ -45,7 +45,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../AC%20Circuits/">AC Circuits</a>
+                <li class="toctree-l1"><a class="reference internal" href="../Analog%20Circuits/">Analog Circuits</a>
                 </li>
               </ul>
               <ul>
@@ -71,15 +71,21 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#impedance-and-admittance">Impedance and Admittance</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#amplifiers">Amplifiers</a>
+    </li>
     </ul>
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../DC%20Circuits/">DC Circuits</a>
+                <li class="toctree-l1"><a class="reference internal" href="../Digital%20Circuits/">Digital Circuits</a>
                 </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../Interview%20Questions/">Interview Questions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../LASERs%20101/">LASERs 101</a>
                 </li>
               </ul>
               <ul>
@@ -191,12 +197,42 @@ Where R is the internal resistance of the motor. So <strong>for no internal resi
 <p><strong>Impedance</strong> = The effective resistance of an electric circuit from the combined effects of <strong>resistance</strong> and <strong>reactance</strong></p>
 <p><strong>Admittance</strong> = Inverse of Impedance. A measure of ease of conduction.</p>
 <p><img alt="" src="../images/impedanceadmittancetable.png" width="400" /></p>
+<h2 id="amplifiers">Amplifiers</h2>
+<p>A generic voltage amplifier commonly used in analog signal amplification due to its simplicity. </p>
+<p><img _300_="&quot;300&quot;" alt="" src="../images/amplifier-equivalent.JPG" width:="width:" /></p>
+<ul>
+<li><span class="arithmatex">\(A_{vo}R_i\)</span> - Voltage Controlled Voltage Source<ul>
+<li><span class="arithmatex">\(A_{vo}\)</span> - Gain Factor</li>
+<li><span class="arithmatex">\(R_i\)</span> - Input Resistance</li>
+</ul>
+</li>
+<li><span class="arithmatex">\(R_o\)</span> - Output Resistance - Accounts for change in output voltage as the amplifier is utilized to supply more output current to a load. </li>
+</ul>
+<p>When designing an amplifier, <span class="arithmatex">\(R_o\)</span> should always be smaller than <span class="arithmatex">\(R_L\)</span>. This will maintain a voltage gain greater than 1. </p>
+<div class="arithmatex">\[
+\begin{equation}
+    A_v = \dfrac{v_o}{v_i} = A_{vo}\dfrac{R_L}{R_L + R_o}
+\end{equation}
+\]</div>
+<p>The input resistance induces a voltage divider action at the input. Where <span class="arithmatex">\(R_S\)</span> is the resistance from the source to the amplifier.</p>
+<div class="arithmatex">\[
+\begin{equation}
+    v_i = v_s \dfrac{R_i}{R_i + R_s}
+\end{equation}
+\]</div>
+<p>So the effective gain of the circuit including the <span class="arithmatex">\(R_S\)</span> resistance is.
+<script type="math/tex; mode=display">
+\begin{equation}
+   \boxed{\dfrac{v_o}{v_s} = A_{vo}\dfrac{R_i}{R_i+R_S}\dfrac{R_L}{R_L + R_o}}
+\end{equation}
+</script>
+</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../Circuit%20Devices/" class="btn btn-neutral float-left" title="Circuit Devices"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../DC%20Circuits/" class="btn btn-neutral float-right" title="DC Circuits">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Digital%20Circuits/" class="btn btn-neutral float-right" title="Digital Circuits">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -222,7 +258,7 @@ Where R is the internal resistance of the motor. So <strong>for no internal resi
       <span><a href="../Circuit%20Devices/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../DC%20Circuits/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../Digital%20Circuits/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

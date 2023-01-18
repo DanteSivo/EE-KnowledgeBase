@@ -1,0 +1,79 @@
+Circuit: * C:\Users\Dante Sivo\Documents\GitHub\EE-KnowledgeBase\docs\SPICE-files\Draft1.asc
+
+Direct Newton iteration for .op point succeeded.
+Semiconductor Device Operating Points:
+                        --- BSIM3 MOSFETS ---
+Name:        m7          m8          m2          m1          m4
+Model:    rit4007n7   rit4007n7   rit4007n7   rit4007n7   rit4007p7
+Id:        5.18e-04    4.25e-04    2.12e-04    2.12e-04    2.13e-04
+Vgs:       4.58e+00    4.58e+00    3.55e+00    3.55e+00    1.97e-02
+Vds:       4.58e+00    1.45e+00    6.09e+00    6.11e+00    2.45e+00
+Vbs:       0.00e+00    0.00e+00   -1.45e+00   -1.45e+00    2.45e+00
+Vth:       1.42e+00    1.42e+00    1.83e+00    1.83e+00   -1.61e+00
+Vdsat:     1.94e+00    1.94e+00    1.38e+00    1.38e+00   -6.69e-01
+Gm:        2.72e-04    1.81e-04    2.15e-04    2.15e-04    4.79e-04
+Gds:       1.05e-05    1.28e-04    3.74e-06    3.74e-06    9.17e-06
+Gmb        2.12e-05    3.61e-05    3.75e-05    3.75e-05    5.06e-05
+Cbd:       2.32e-15    3.52e-15    1.87e-15    1.87e-15    5.32e-14
+Cbs:       5.60e-15    5.60e-15    3.52e-15    3.52e-15    2.80e-14
+Cgsov:     6.53e-15    6.53e-15    6.53e-15    6.53e-15    9.57e-14
+Cgdov:     6.53e-15    6.53e-15    6.53e-15    6.53e-15    9.57e-14
+Cgbov:     2.76e-16    2.76e-16    2.76e-16    2.76e-16    9.32e-16
+dQgdVgb:   4.96e-14    5.71e-14    4.73e-14    4.73e-14    4.50e-13
+dQgdVdb:  -6.51e-15   -1.93e-14   -6.48e-15   -6.48e-15   -9.47e-14
+dQgdVsb:  -4.74e-14   -3.92e-14   -3.98e-14   -3.98e-14   -3.17e-13
+dQddVgb:  -1.90e-14   -2.72e-14   -1.90e-14   -1.90e-14   -1.85e-13
+dQddVdb:   8.84e-15    2.37e-14    8.38e-15    8.38e-15    1.48e-13
+dQddVsb:   1.75e-14    1.03e-14    1.53e-14    1.53e-14    1.07e-13
+dQbdVgb:  -5.29e-15   -1.72e-15   -3.03e-15   -3.03e-15   -3.60e-14
+dQbdVdb:  -2.32e-15   -9.55e-15   -1.86e-15   -1.86e-15   -5.29e-14
+dQbdVsb:  -8.53e-15   -6.80e-15   -8.58e-15   -8.58e-15   -7.48e-14
+
+Name:        m3
+Model:    rit4007p7
+Id:        2.12e-04
+Vgs:       0.00e+00
+Vds:       2.43e+00
+Vbs:       2.43e+00
+Vth:      -1.61e+00
+Vdsat:    -6.69e-01
+Gm:        4.79e-04
+Gds:       9.18e-06
+Gmb        5.06e-05
+Cbd:       5.32e-14
+Cbs:       2.81e-14
+Cgsov:     9.57e-14
+Cgdov:     9.57e-14
+Cgbov:     9.32e-16
+dQgdVgb:   4.50e-13
+dQgdVdb:  -9.47e-14
+dQgdVsb:  -3.17e-13
+dQddVgb:  -1.85e-13
+dQddVdb:   1.48e-13
+dQddVsb:   1.07e-13
+dQbdVgb:  -3.60e-14
+dQbdVdb:  -5.29e-14
+dQbdVsb:  -7.49e-14
+
+
+
+
+Measurement "diff_gain" FAIL'ed
+
+
+Date: Fri Oct 28 13:17:23 2022
+Total elapsed time: 0.077 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 25
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 12
+fillins = 0
+solver = Normal
+Matrix Compiler1: 598 bytes object code size
+Matrix Compiler2: 1.10 KB object code size
